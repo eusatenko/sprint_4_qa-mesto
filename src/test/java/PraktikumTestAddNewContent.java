@@ -14,9 +14,9 @@ public class PraktikumTestAddNewContent {
     @Test
     public void test() {
         // Создаём драйвер для браузера Chrome
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--no-sandbox", "--headless", "--disable-dev-shm-usage");
-        driver = new ChromeDriver(options);
+       // ChromeOptions options = new ChromeOptions(); // для тренажёра Практикума
+       // options.addArguments("--no-sandbox", "--headless", "--disable-dev-shm-usage"); // для тренажёра Практикума
+        driver = new ChromeDriver(); // для тренажёра Практикума  driver = new ChromeDriver(options);
         driver.get("https://qa-mesto.praktikum-services.ru/");
         // Выполни авторизацию
         driver.findElement(By.id("email")).sendKeys("sirigij514@24rumen.com");

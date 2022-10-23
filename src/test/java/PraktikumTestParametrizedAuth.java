@@ -44,9 +44,10 @@ public class PraktikumTestParametrizedAuth {
 
     @Test
     public void loginTest() {
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--no-sandbox", "--headless", "--disable-dev-shm-usage");
-        WebDriver driver = new ChromeDriver(options);
+//        ChromeOptions options = new ChromeOptions(); // для тренажёра Практикума
+//        options.addArguments("--no-sandbox", "--headless", "--disable-dev-shm-usage"); // для тренажёра Практикума
+//        WebDriver driver = new ChromeDriver(options);
+        WebDriver driver = new ChromeDriver();
         driver.get("https://qa-mesto.praktikum-services.ru/");
         driver.findElement(By.id("email")).sendKeys(email);
         driver.findElement(By.id("password")).sendKeys(password);

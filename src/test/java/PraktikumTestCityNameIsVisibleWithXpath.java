@@ -35,9 +35,10 @@ public class PraktikumTestCityNameIsVisibleWithXpath {
 
     @Test
     public void citiesTest() {
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--no-sandbox", "--headless", "--disable-dev-shm-usage");
-        WebDriver driver = new ChromeDriver(options);
+//        ChromeOptions options = new ChromeOptions(); // для тренажёра Практикума
+//        options.addArguments("--no-sandbox", "--headless", "--disable-dev-shm-usage"); // для тренажёра Практикума
+//        WebDriver driver = new ChromeDriver(options); // для тренажёра Практикума
+        WebDriver driver = new ChromeDriver();
         driver.get("https://qa-mesto.praktikum-services.ru/");
         // Выполни авторизацию. Укажи email и пароль своей учетной записи
         driver.findElement(By.id("email")).sendKeys("sirigij514@24rumen.com");
@@ -48,7 +49,7 @@ public class PraktikumTestCityNameIsVisibleWithXpath {
 
         // Найди карточку города по его названию
 
-        List<WebElement> elements = driver.findElements(By.xpath(".//li[contains(text(), cityName)]"));
+        List<WebElement> elements = driver.findElements(By.xpath(".//ul[contains(text(), cityName)]"));
 
         // Проверь, что нашёлся хотя бы один нужный элемент
         assertEquals(isVisible, elements.size() != 0);
