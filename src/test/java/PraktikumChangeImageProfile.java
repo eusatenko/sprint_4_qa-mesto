@@ -7,7 +7,7 @@ import org.junit.After;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Praktikum_ChangeImageProfile {
+public class PraktikumChangeImageProfile {
 
     private WebDriver driver;
 
