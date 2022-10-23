@@ -9,7 +9,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class PraktikumScrollFirstElement {
+public class PraktikumTestScrollFirstElement {
     private WebDriver driver;
 
     @Test

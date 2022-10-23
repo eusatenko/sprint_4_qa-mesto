@@ -19,14 +19,14 @@ import static org.junit.Assert.assertEquals;
  */
 
 @RunWith(Parameterized.class)
-public class PraktikumParametrizedAuth {
+public class PraktikumTestParametrizedAuth {
     //Добавь необходимые поля
     private final String email;
     private final String password;
     private final boolean isLoggedIn;
 
 
-    public PraktikumParametrizedAuth(String email, String password, boolean isLoggedIn) {
+    public PraktikumTestParametrizedAuth(String email, String password, boolean isLoggedIn) {
         this.email = email;
         this.password = password;
         this.isLoggedIn = isLoggedIn;
