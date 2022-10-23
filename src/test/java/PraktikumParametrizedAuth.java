@@ -10,6 +10,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static org.junit.Assert.assertEquals;
 
+/*
+Напиши параметризованный тест для на формы авторизации тестового стенда. Нужно проверить, может ли пользователь войти в систему по определённому логину и паролю.
+Назови поля email, password и isLoggedIn.
+Для тестовых данных возьми свои учётные данные и несколько случайных. Например:
+{"qwerty@gmail.com", "Pw123456", true},
+{"email2@test.example", "password2", false}.
+ */
+
 @RunWith(Parameterized.class)
 public class PraktikumParametrizedAuth {
     //Добавь необходимые поля
