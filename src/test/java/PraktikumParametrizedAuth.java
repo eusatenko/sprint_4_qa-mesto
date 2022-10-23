@@ -11,14 +11,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
-public class PrakticumParametrizedAuth {
+public class PraktikumParametrizedAuth {
     //Добавь необходимые поля
     private final String email;
     private final String password;
     private final boolean isLoggedIn;
 
 
-    public PrakticumParametrizedAuth(String email, String password, boolean isLoggedIn) {
+    public PraktikumParametrizedAuth(String email, String password, boolean isLoggedIn) {
         this.email = email;
         this.password = password;
         this.isLoggedIn = isLoggedIn;
