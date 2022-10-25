@@ -10,11 +10,15 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.HomePageMesto;
 import pages.LoginPageMesto;
 import pages.ProfilePageMesto;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 
 public class PraktikumTestChangeDescriptionAndCheckModification {
     private WebDriver driver;
-
+    @Before
+    public void startUp() {
+        WebDriverManager.chromedriver().setup();
+    }
     @Test
     public void checkActivity() throws InterruptedException {
         // драйвер для браузера Chrome
@@ -42,12 +46,9 @@ public class PraktikumTestChangeDescriptionAndCheckModification {
         // это переменная со значением, которое надо ввести в поле «Занятие»
         String newActivity = "Тестировщик";
         // в одном шаге проверь, что поле «Занятие» доступно для редактирования, и введи в него новое значение
-//        new WebDriverWait(driver, 3)
-//                .until(ExpectedConditions.visibilityOfElementLocated(By.id("owner-description")));
-//        Thread.sleep(5000);
-//        driver.findElement(By.cssSelector(".popup_is-opened [name="userDescription']").clear();
-//        driver.findElement(By.className("popup__input popup__input_type_description")).clear();
-//        driver.findElement(By.className("popup__input popup__input_type_description")).sendKeys("Тестировщик");
+       new WebDriverWait(driver, 3)
+                .until(ExpectedConditions.visibilityOfElementLocated(By.id("owner-description")));
+
         objProfilePage.setActivity(newActivity);
         // сохрани изменения в профиле
         objProfilePage.clickSaveButtonInProfile();
