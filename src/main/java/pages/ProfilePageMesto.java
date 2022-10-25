@@ -9,7 +9,7 @@ public class ProfilePageMesto {
     // создай локатор для поля «Занятие» в профиле пользователя
     private By activity = By.id("owner-description");
     // создай локатор для кнопки «Сохранить» в профиле пользователя
-    //private By save = By.className("button popup__button");
+    private By save = By.xpath(".//button[text()='Сохранить']");
 
     public ProfilePageMesto (WebDriver driver){
         this.driver = driver;
@@ -18,14 +18,14 @@ public class ProfilePageMesto {
     // метод для проверки открытости поля «Занятие», удаления текста из неё и ввода нового значения из параметра
 
     public void setActivity(String changed) {
-        //Assert.assertTrue(driver.findElement(activity).isEnabled());
+        Assert.assertTrue(driver.findElement(activity).isEnabled());
         driver.findElement(activity).clear();
         driver.findElement(activity).sendKeys(changed);
     }
 
 
     // метод для нажатия на кнопку сохранения профиля
-    /*public void clickSaveButtonInProfile() {
+    public void clickSaveButtonInProfile() {
         driver.findElement(save).click();
-    }*/
+    }
 }

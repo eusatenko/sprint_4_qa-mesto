@@ -1,3 +1,4 @@
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -19,7 +20,7 @@ public class PraktikumTestChangeDescription {
         WebDriverManager.chromedriver().setup();
     }
     @Test
-    public void checkActivity() throws InterruptedException {
+    public void checkActivity()  {
         // драйвер для браузера Chrome
         driver = new ChromeDriver();
         // переход на страницу тестового приложения
@@ -50,16 +51,16 @@ public class PraktikumTestChangeDescription {
 
         objProfilePage.setActivity(newActivity);
         // сохрани изменения в профиле
-        //objProfilePage.clickSaveButtonInProfile();
+        objProfilePage.clickSaveButtonInProfile();
 
         // проверь, что поле «Занятие» на основной странице поменяло значение на новое
         objHomePage.waitForChangedActivity(newActivity);
     }
 
 
-//    @After
-//    public void teardown() {
-//        // Закрой браузер
-//        driver.quit();
-//    }
+    @After
+    public void teardown() {
+        // Закрой браузер
+        driver.quit();
+    }
 }
